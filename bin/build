@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+if [ $# -ne 1 ]; then
+    echo "Usage: build <TAG>"
+    exit 1
+fi
+
+TAG=$1
+
+docker build -t suzukishunsuke/ubuntu-python:$TAG .
